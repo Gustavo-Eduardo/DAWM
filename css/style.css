@@ -5966,7 +5966,7 @@ input:focus {
   color: #777777;
   text-align: right;
   float: right;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
 }
 
 /* line 2038, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product.scss */
@@ -8524,7 +8524,7 @@ h6 {
   line-height: 1.2;
   color: #fff;
   font-weight: 500;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
 }
 
 @media (max-width: 991px) {
