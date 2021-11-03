@@ -4333,3 +4333,18 @@ readers do not read off random characters that represent icons */
 .client_review .container .row h2{
   color:white;
 }
+#perfil div{
+  margin-top: 0.1%;
+  margin-bottom: 0.1%;
+}
+#perfil div button{
+  margin-top: 2%;
+}
+#registro div{
+  margin-top: 0.1%;
+  margin-bottom: 0.1%;
+}
+#registro div button{
+  margin-top: 2%;
+  margin-top: 1%;
+}
