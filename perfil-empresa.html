@@ -144,14 +144,55 @@
         <div class="col-12 py-1">
             <input type="text" class="form-control" id="telefono" name="telefono" value="">
         </div>
+        <div class="col-12 py-1">
+            <label for="direccion" class="form-label">Dirección</label>
+        </div>
+        <div class="col-12 py-1">
+            <div id="map" style="height: 480px;"></div>
+            <script>
+            function initMap() {
+                var uluru = {
+                lat: -25.363,
+                lng: 131.044
+                };
+                var grayStyles = [{
+                    featureType: "all",
+                    stylers: [{
+                        saturation: -90
+                    },
+                    {
+                        lightness: 50
+                    }
+                    ]
+                },
+                {
+                    elementType: 'labels.text.fill',
+                    stylers: [{
+                    color: '#ccdee9'
+                    }]
+                }
+                ];
+                var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -31.197,
+                    lng: 150.744
+                },
+                zoom: 9,
+                styles: grayStyles,
+                scrollwheel: false
+                });
+            }
+            </script>
+            <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap">
+            </script>
+        </div>
         <div class="col-12 gap-2 justify-content-md-end d-md-flex">            
             <button class="btn_1 text-uppercase" type="submit">Guardar cambios</button>                   
         </div>
         <a href="index.html">Cerrar sesión</a>
     </form>
     <!--::perfil_part end::-->
-
-
 
 
     <!--::footer_part start::-->    
