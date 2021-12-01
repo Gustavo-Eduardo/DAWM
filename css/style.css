@@ -8691,3 +8691,16 @@ h6 {
 }
 
 /*# sourceMappingURL=../css/style.map */
+
+.team_img{
+  max-width: 205px;
+  margin: 15px auto;  
+  border-radius: 150px;
+  position: relative;
+}
+
+#map {
+  border-radius: 15px;  
+  height: 30vw;
+  width: 100%;
+}
