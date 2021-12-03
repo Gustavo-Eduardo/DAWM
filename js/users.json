@@ -1,0 +1,14 @@
+[
+{
+"user": "client",
+"password": "client",
+"type": "c"
+},
+{"user": "store",
+"password": "store",
+"type": "s"
+},
+{"user": "admin",
+"password": "admin",
+"type": "a"}
+]
