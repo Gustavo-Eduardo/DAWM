@@ -11,7 +11,8 @@ $(function() {
     // sales ratio
     // ============================================================== 
     var chart = new Chartist.Line('.sales', {
-        labels: [1, 2, 3, 4, 5, 6, 7],
+        labels: ["Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre"
+        ],
         series: [
             [24.5, 28.3, 42.7, 32, 34.9, 48.6, 40],
             [8.9, 5.8, 21.9, 5.8, 16.5, 6.5, 14.5]
@@ -36,6 +37,7 @@ $(function() {
     });
 
     var chart = [chart];
+
 
     // ============================================================== 
     // Our Visitor

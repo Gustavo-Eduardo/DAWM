@@ -16,6 +16,42 @@ if(page=='register.html'){
         document.getElementById('registro').setAttribute('action','index-empresa.html')
     }
 }
+
+//SCRIPT DEL LOGIN
+
+    function updateUsers(){
+        users = []
+        fetch('users.json')
+            .then(response => response.json())
+            .then(elements => {
+                elements.forEach(element => {
+                    users += element  
+                    window.alert(element)
+                });
+            })
+        return users
+    }
+
+    document.querySelector("#session").addEventListener('click',function(){
+        users = updateUsers()
+        user = document.getElementById('name').value;
+        password = document.getElementById('password').value;
+        
+        if(user == 'client' && password == 'client'){
+            window.location.assign('../index-cliente.html')
+            window.alert("Usted es un Cliente")
+        }else if(user == 'store' && password=='store') {
+            window.location.href = 'index-empresa.html'
+            window.alert("Usted es un Empresa")
+        }else if(user == 'admin' && password=='admin') {
+            window.location.replace('index-empresa.html')
+            window.alert("Usted es un Administrador")
+        } else {
+            window.alert("Los datos ingresados son incorrectos.\nInténtelo nuevamente.")     
+        }
+    });
+
+
 //SCRIPT DE LA BUSQUEDA EN NOTICIAS - noticias.html
 if(page=='noticias.html'){
     let input = document.getElementById('iBusquedaNoticias');
