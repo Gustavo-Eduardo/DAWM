@@ -200,46 +200,52 @@
         <div class="col-12 py-1 mt-4">
             <label for="direccion" class="form-label">Dirección</label>
         </div>
+        <div class="col-6">
+            <label id="latitud" class="form-label">Latitud: -2,1480556</label>
+        </div>
+        <div class="col-6">
+            <label id="longitud" class="form-label">Longitud: -79.9642481</label>
+        </div>
         <div class="col-12 py-1">
-            <div id="map" style="height: 480px;"></div>
+            <div id="map"></div>
             <script>
             function initMap() {
-                var uluru = {
-                lat: -25.363,
-                lng: 131.044
-                };
-                var grayStyles = [{
-                    featureType: "all",
-                    stylers: [{
-                        saturation: -90
-                    },
-                    {
-                        lightness: 50
-                    }
-                    ]
-                },
-                {
-                    elementType: 'labels.text.fill',
-                    stylers: [{
-                    color: '#ccdee9'
-                    }]
+                var latitud = -2.1480556;
+                var longitud = -79.9642481;
+
+                coordenadas = {
+                    lat: latitud,
+                    lng: longitud
                 }
-                ];
-                var map = new google.maps.Map(document.getElementById('map'), {
-                center: {
-                    lat: -31.197,
-                    lng: 150.744
-                },
-                zoom: 9,
-                styles: grayStyles,
-                scrollwheel: false
+                
+                generateMap(coordenadas);
+               
+            }
+            function generateMap(coordenadas){
+                var mapa = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 12,
+                    center: new google.maps.LatLng(coordenadas.lat, coordenadas.lng)
                 });
+                var marcador = new google.maps.Marker({
+                    map: mapa,
+                    draggable: true,
+                    position: new google.maps.LatLng(coordenadas.lat, coordenadas.lng)
+                });
+
+                marcador.addListener("dragend", function(event){                    
+                    document.getElementById("latitud").innerHTML = "Latitud: " + this.getPosition().lat().toString();
+                    document.getElementById("longitud").innerHTML = "Longitud: " + this.getPosition().lng().toString();
+                });
+
+
+
             }
             </script>
             <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap">
-            </script>
+            src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+            </script>            
         </div>
+        
         <div class="col-12 gap-2 justify-content-md-end d-md-flex">            
             <button class="btn_1 text-uppercase" type="submit">Guardar cambios</button>                   
         </div>

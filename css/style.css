@@ -8694,7 +8694,7 @@ h6 {
 
 .team_img{
   max-width: 205px;
-  margin: 15px auto;  
+  margin-bottom: 50px;  
   border-radius: 150px;
   position: relative;
 }
