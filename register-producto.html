@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body>    
     <!--::header part start::-->
         <header class="main_menu home_menu">
         <div class="container">
@@ -87,9 +87,8 @@
     </section><br><br><br><br><br>
     <!-- breadcrumb part end-->
 
-    <!--::register_part start::-->
-
-    <form class="row py-3 mx-5" action="index-cliente.html" id="registro" 
+    <!--::register_part start::-->    
+    <form class="row py-3 mx-5" action="index-cliente.html" id="registro" >
         
         <div class="col-12 py-1">
             <label for="name" class="form-label">Nombre del producto</label>
@@ -98,10 +97,21 @@
             <input type="text" class="form-control" id="name" name="name" value="">
         </div>
         <div class="col-12 py-1">
-            <label for="id-articulo" class="form-label">id del artículo</label>
+            <label for="precio" class="form-label">Precio</label>
         </div>
         <div class="col-12 py-1">
-            <input type="text" class="form-control" id="id-articulo" name="id-articulo" value="">
+            <input type="number" id="precio" name="precio" min="0.00" max="1000.00" step="0.01" />
+        </div>
+        <div class="col-12 py-1">
+            <label for="categoria" class="form-label">Categoría</label>
+        </div>        
+        <div class="col-12 py-1">
+            <select id='categoria' name='categoria'>
+                <option value=" 1">Accesorios</option>
+                <option value="1">Libros</option>
+                <option value="1">Tecnología</option>
+                <option value="1">Vestimenta</option>                    
+            </select><br><br>
         </div>
         <div class="col-12 py-1">
             <label for="tallas" class="form-label">Tallas disponinbles</label>

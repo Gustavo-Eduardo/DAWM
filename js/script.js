@@ -24,7 +24,7 @@ if(page=='login.html'){
         fetch('../data/users.json')
             .then(response => response.json())
             .then(data => {
-                window.alert('aaaaaaaa')
+                /*window.alert('aaaaaaaa')
                 window.alert(data[0].user)
                 /*elements.forEach(element => {
                     users += element  
