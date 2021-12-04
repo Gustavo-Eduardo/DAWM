@@ -1,14 +1,14 @@
 [
 {
-"user": "client",
-"password": "client",
+"mail": "cliente@hotmail.com",
+"password": "cliente",
 "type": "c"
 },
-{"user": "store",
-"password": "store",
-"type": "s"
+{"mail": "empresa@hotmail.com",
+"password": "empresa",
+"type": "e"
 },
-{"user": "admin",
+{"mail": "admin@hotmail.com",
 "password": "admin",
 "type": "a"}
 ]

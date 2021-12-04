@@ -39,13 +39,13 @@ if(page=='login.html'){
         user = document.getElementById('name').value;
         password = document.getElementById('password').value;
         
-        if(user == 'client' && password == 'client'){            
+        if(user == 'cliente@hotmail.com' && password == 'cliente'){            
             window.alert("Usted es un Cliente")
             document.getElementById('inicioSesion').setAttribute('action','index-cliente.html')
-        }else if(user == 'store' && password=='store') {            
+        }else if(user == 'empresa@hotmail.com' && password=='empresa') {            
             window.alert("Usted es un Empresa")
             document.getElementById('inicioSesion').setAttribute('action','index-empresa.html')
-        }else if(user == 'admin' && password=='admin') {            
+        }else if(user == 'admin@hotmail.com' && password=='admin') {            
             window.alert("Usted es un Administrador")
             document.getElementById('inicioSesion').setAttribute('action','index-admin.html')
         } else {
