@@ -21,14 +21,16 @@ if(page=='register.html'){
 if(page=='login.html'){
     function updateUsers(){
         users = []
-        fetch('users.json')
+        fetch('../data/users.json')
             .then(response => response.json())
-            .then(elements => {
-                elements.forEach(element => {
+            .then(data => {
+                window.alert('aaaaaaaa')
+                window.alert(data[0].user)
+                /*elements.forEach(element => {
                     users += element  
                     window.alert(element)
                     
-                });
+                });*/
             })
         return users
     }
