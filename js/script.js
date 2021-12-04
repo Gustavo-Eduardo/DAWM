@@ -8,12 +8,45 @@ if(page=='register.html'){
     radioComprar.onchange = function(){
         console.log('comprar')
         document.getElementById('registro').setAttribute('action','index-cliente.html')
+        let habilita = document.getElementsByClassName('habilitaC')
+        for(let h of habilita){
+            let clase = h.getAttribute('class')
+            if(clase.includes('d-none')){
+                h.setAttribute('class',clase.substring(0,clase.length-7))
+            }
+            console.log(h.getAttribute('class'))
+        }
+        let deshabilita = document.getElementsByClassName('habilitaV')
+        for(let h of deshabilita){
+            let clase = h.getAttribute('class')
+            if(!clase.includes('d-none')){
+                h.setAttribute('class',clase+' d-none')
+            }
+            console.log(h.getAttribute('class'))
+        }
+        
     }
 
     let radioVender = document.getElementById('vender')
     radioVender.onchange = function(){
         console.log('vender')
         document.getElementById('registro').setAttribute('action','index-empresa.html')
+        let habilita = document.getElementsByClassName('habilitaV')
+        for(let h of habilita){
+            let clase = h.getAttribute('class')
+            if(clase.includes('d-none')){
+                h.setAttribute('class',clase.substring(0,clase.length-7))
+            }
+            console.log(h.getAttribute('class'))
+        }
+        let deshabilita = document.getElementsByClassName('habilitaC')
+        for(let h of deshabilita){
+            let clase = h.getAttribute('class')
+            if(!clase.includes('d-none')){
+                h.setAttribute('class',clase+' d-none')
+            }
+            console.log(h.getAttribute('class'))
+        }
     }
 }
 
