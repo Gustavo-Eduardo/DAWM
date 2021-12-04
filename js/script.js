@@ -18,7 +18,7 @@ if(page=='register.html'){
 }
 
 //SCRIPT DEL LOGIN
-
+if(page=='login.html'){
     function updateUsers(){
         users = []
         fetch('users.json')
@@ -27,30 +27,30 @@ if(page=='register.html'){
                 elements.forEach(element => {
                     users += element  
                     window.alert(element)
+                    
                 });
             })
         return users
     }
-
     document.querySelector("#session").addEventListener('click',function(){
         users = updateUsers()
         user = document.getElementById('name').value;
         password = document.getElementById('password').value;
         
-        if(user == 'client' && password == 'client'){
-            window.location.assign('../index-cliente.html')
+        if(user == 'client' && password == 'client'){            
             window.alert("Usted es un Cliente")
-        }else if(user == 'store' && password=='store') {
-            window.location.href = 'index-empresa.html'
+            document.getElementById('inicioSesion').setAttribute('action','index-cliente.html')
+        }else if(user == 'store' && password=='store') {            
             window.alert("Usted es un Empresa")
-        }else if(user == 'admin' && password=='admin') {
-            window.location.replace('index-empresa.html')
+            document.getElementById('inicioSesion').setAttribute('action','index-empresa.html')
+        }else if(user == 'admin' && password=='admin') {            
             window.alert("Usted es un Administrador")
+            document.getElementById('inicioSesion').setAttribute('action','index-admin.html')
         } else {
             window.alert("Los datos ingresados son incorrectos.\nInténtelo nuevamente.")     
         }
     });
-
+}
 
 //SCRIPT DE LA BUSQUEDA EN NOTICIAS - noticias.html
 if(page=='noticias.html'){
