@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- navegacion guiada CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
 </head>
 
 <body>
@@ -46,10 +48,10 @@
                                     <a class="nav-link" href="index-empresa.html">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="about-empresa.html">acerca de</a>
+                                    <a class="nav-link" href="about-empresa.html" data-step="1" data-intro='Conocerás un poco acerca de la empresa y nuestros colaboradores.'>acerca de</a>
                                 </li>                                
                                 <li class="nav-item">
-                                    <a class="nav-link" href="productos-empresa.html">productos</a>
+                                    <a class="nav-link" href="productos-empresa.html" data-step="1" data-intro='Aquí podrás agregar nuevos productos.'>productos</a>
                                 </li>
                             </ul>
                         </div>
@@ -82,7 +84,8 @@
                         <div class="banner_text_iner">
                             <h1>Los mejores
                                 regalos</h1>
-                            <p>Las mejores cosas en la vida estan destisilnadas a ser compartidas</p>                            
+                            <p>Las mejores cosas en la vida estan destinadas a ser compartidas</p> 
+                            <a class="btn_1" onclick='javascript:introJs().start();'>¡Hechar un vistazo!</a>                           
                         </div>
                     </div>
                 </div>
@@ -345,6 +348,8 @@
     <script src="js/mail-script.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
+        <!-- navegacion guiada js -->
+    <script type='text/javascript' src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
 </body>
 
 </html>
