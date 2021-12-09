@@ -58,27 +58,27 @@ if(page=='login.html'){
             .then(response => response.json())
             .then(data => {
                 /*window.alert('aaaaaaaa')
-                window.alert(data[0].user)
-                /*elements.forEach(element => {
+                window.alert(data[0].user)*/
+                elements.forEach(element => {
                     users += element  
-                    window.alert(element)
-                    
-                });*/
+                    window.alert(element)                    
+                });
             })
         return users
     }
-    document.querySelector("#session").addEventListener('click',function(){
-        users = updateUsers()
-        user = document.getElementById('name').value;
-        password = document.getElementById('password').value;
+    document.querySelector("#session").addEventListener('click',function(){        
+        let usuarios = updateUsers();
         
-        if(user == 'cliente@hotmail.com' && password == 'cliente'){            
+        let correo = document.getElementById('email').value;
+        let contrasena = document.getElementById('password').value;
+        
+        if(correo == 'cliente@hotmail.com' && contrasena == '1'){            
             window.alert("Usted es un Cliente")
             document.getElementById('inicioSesion').setAttribute('action','index-cliente.html')
-        }else if(user == 'empresa@hotmail.com' && password=='empresa') {            
+        }else if(correo == 'empresa@hotmail.com' && contrasena=='2') {            
             window.alert("Usted es un Empresa")
             document.getElementById('inicioSesion').setAttribute('action','index-empresa.html')
-        }else if(user == 'admin@hotmail.com' && password=='admin') {            
+        }else if(correo == 'admin@hotmail.com' && contrasena=='0') {            
             window.alert("Usted es un Administrador")
             document.getElementById('inicioSesion').setAttribute('action','index-admin.html')
         } else {

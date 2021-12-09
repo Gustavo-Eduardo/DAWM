@@ -1,14 +1,17 @@
 [
 {
-"mail": "cliente@hotmail.com",
-"password": "cliente",
-"type": "c"
+"correo": "admin@hotmail.com",
+"contrasena": "0",
+"tipo": "a"
 },
-{"mail": "empresa@hotmail.com",
-"password": "empresa",
-"type": "e"
+{
+"correo": "cliente@hotmail.com",
+"contrasena": "1",
+"tipo": "c"
 },
-{"mail": "admin@hotmail.com",
-"password": "admin",
-"type": "a"}
+{
+"correo": "empresa@hotmail.com",
+"contrasena": "2",
+"tipo": "e"
+}
 ]
